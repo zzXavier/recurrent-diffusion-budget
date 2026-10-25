@@ -1,9 +1,7 @@
-# P11 交接记录
+# Handoff
 
-当前阶段：上游版本已固定，正式验收待完成。
+Current stage: local formal experiment and unit tests passed. Five trained model checkpoints, five held-out prediction files, individual generated samples, comparison image and summary are in `results/`. Run key: UCI-digits, seed 20261103, 120 updates, CPU.
 
-最近已核实：项目远端以及 UPSTREAM.md 中的源码提交。
+Last verified commands: `python -m unittest discover -s tests`, `python run.py reproduce`. The formal run asserted a nonzero projection update and exact held-out prediction equality after checkpoint reload for every variant. The next independent check is `python run.py evaluate`, then reproduce into a fresh output directory and compare MSE and parameter counts against `results/summary.csv`.
 
-待执行：运行上游入口 looped_dit/train.py ，保存日志，再按项目 README 的实验目标添加留出集对照。
-
-验收要求：从干净克隆运行演示与正式基线，使用保存的预测重建结果，涉及训练则测试权重重载。
+Known limitations: one seed; low-resolution class conditions; no claim on natural-image generation or large-model performance. Public/private release decisions are tracked by the portfolio index.

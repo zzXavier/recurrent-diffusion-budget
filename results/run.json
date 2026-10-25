@@ -1,0 +1,65 @@
+{
+  "config": {
+    "seed": 20261103,
+    "steps": 120,
+    "batch": 16,
+    "threads": 2,
+    "lr": 0.002,
+    "eval_count": 120,
+    "validation_fraction": 0.2,
+    "sample_steps": 12,
+    "actual_steps": 120
+  },
+  "torch": "2.4.1+cu121",
+  "device": "cpu",
+  "train_count": 1437,
+  "test_count": 360,
+  "dataset": "UCI Optical Recognition of Handwritten Digits, sklearn load_digits",
+  "models": [
+    {
+      "name": "shared-1",
+      "loops": 1,
+      "shared": true,
+      "active_block_calls": 3,
+      "parameters": 64390,
+      "final_update_l2": 0.7684251070022583,
+      "last_train_loss": 0.7011306881904602
+    },
+    {
+      "name": "shared-2",
+      "loops": 2,
+      "shared": true,
+      "active_block_calls": 4,
+      "parameters": 64390,
+      "final_update_l2": 0.7583563327789307,
+      "last_train_loss": 0.6662731170654297
+    },
+    {
+      "name": "shared-4",
+      "loops": 4,
+      "shared": true,
+      "active_block_calls": 6,
+      "parameters": 64390,
+      "final_update_l2": 0.7360939383506775,
+      "last_train_loss": 0.6696683764457703
+    },
+    {
+      "name": "unshared-2",
+      "loops": 2,
+      "shared": false,
+      "active_block_calls": 4,
+      "parameters": 82214,
+      "final_update_l2": 0.7686336636543274,
+      "last_train_loss": 0.6634150743484497
+    },
+    {
+      "name": "unshared-4",
+      "loops": 4,
+      "shared": false,
+      "active_block_calls": 6,
+      "parameters": 117862,
+      "final_update_l2": 0.7639425992965698,
+      "last_train_loss": 0.6315473914146423
+    }
+  ]
+}
