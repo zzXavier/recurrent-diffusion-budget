@@ -2,7 +2,7 @@
 
 ## Latest verified state · 2026-11-03
 
-Public release. [Personal portfolio](https://zzxavier.github.io/projects/) and [public README](https://github.com/zzXavier/recurrent-diffusion-budget) were verified without authentication.
+The public README and experiment artifacts are available from the [repository](https://github.com/zzXavier/recurrent-diffusion-budget).
 
 Verified experiment revision: `563754a2531a1e411a89c05b65eb0e38f48a9897`. A new GitHub checkout passed the unit tests, demo, 120 updates for each of five models and evaluation from saved predictions. The summary matched the archived values.
 
@@ -15,4 +15,4 @@ Current stage: local formal experiment and unit tests passed. Five trained model
 
 Last verified commands: `python -m unittest discover -s tests`, `python run.py reproduce`. The formal run asserted a nonzero projection update and exact held-out prediction equality after checkpoint reload for every variant. The next independent check is `python run.py evaluate`, then reproduce into a fresh output directory and compare MSE and parameter counts against `results/summary.csv`.
 
-Known limitations: one seed; low-resolution class conditions; no claim on natural-image generation or large-model performance. Public/private release decisions are tracked by the portfolio index.
+Known limitations: one seed; low-resolution class conditions; no claim on natural-image generation or large-model performance.
