@@ -1,0 +1,5 @@
+# CPU experiment, CPython 3.11.9; local wheel torch 2.4.1+cu121 also works on CPU.
+numpy==2.3.3
+Pillow==11.3.0
+scikit-learn==1.8.0
+torch==2.4.1

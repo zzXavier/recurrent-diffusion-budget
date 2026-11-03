@@ -1,0 +1,10 @@
+{
+  "seed": 20261103,
+  "steps": 120,
+  "batch": 16,
+  "threads": 2,
+  "lr": 0.002,
+  "eval_count": 120,
+  "validation_fraction": 0.2,
+  "sample_steps": 12
+}
